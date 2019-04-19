@@ -5,3 +5,4 @@ authors = ["Reconcyl <>"]
 edition = "2018"
 
 [dependencies]
+generic-array = "0.13.0"
