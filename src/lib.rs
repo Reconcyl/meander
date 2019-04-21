@@ -115,9 +115,7 @@ impl<D: ArrayLength<Meander1D>> Distribution<Meander<D>> for Standard {
 impl<D: ArrayLength<Meander1D> + ArrayLength<f64>> Meander<D> {
     /// Find the value of each of the variables at a particular point in time.
     pub fn evaluate(&self, t: f64) -> GenericArray<f64, D> {
-        // TODO use a borrowing version of map to avoid clones. `GenericArray` does not
-        // yet seem to support this functionality.
-        self.curves.clone().map(|c| c.evaluate(t))
+        (&self).curves.clone().map(|c| c.evaluate(t))
     }
     /// Return an iterator yielding the values of the variables at intervals of `dt`.
     pub fn time_steps<'a>(&'a self, dt: f64) -> impl Iterator<Item=GenericArray<f64, D>> + 'a {
