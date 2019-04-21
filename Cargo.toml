@@ -12,6 +12,8 @@ documentation = "https://docs.rs/meander"
 homepage = "https://github.com/Reconcyl/meander"
 repository = "https://github.com/Reconcyl/meander"
 
+readme = "README.md"
+
 keywords = []
 categories = []
 
