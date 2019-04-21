@@ -50,6 +50,8 @@ use rand::distributions::{Distribution, Standard};
 const PI2: f64 = 2.0 * std::f64::consts::PI;
 
 /// Represents a sinusoid that varies between 0 and 1.
+///
+/// This can be generated randomly using `rand::random()`.
 #[derive(Clone, Copy, Debug)]
 pub struct UnitSinusoid {
     /// The number of cycles the function makes per unit time.
@@ -78,6 +80,8 @@ impl UnitSinusoid {
 
 /// Represents a curve that meanders through 1-dimensional space. Consists of 3
 /// sinusoids whose values are averaged.
+///
+/// This can be generated randomly using `rand::random()`.
 #[derive(Clone, Copy, Debug)]
 pub struct Meander1D(pub UnitSinusoid, pub UnitSinusoid, pub UnitSinusoid);
 
@@ -98,6 +102,8 @@ impl Distribution<Meander1D> for Standard {
 }
 
 /// Represents a curve that meanders through `D`-dimensional space.
+///
+/// This can be generated randomly using `rand::random()`.
 #[derive(Clone, Debug)]
 pub struct Meander<D: ArrayLength<Meander1D>> {
     /// Each variable is controlled by a separate 1-dimensional function defined here.
