@@ -5,6 +5,14 @@
 //! One place this might be useful is in code that demonstrates how changing certain
 //! parameters changes a model.
 //! 
+//! The variables yielded by this crate will all have values between 0 and 1, so you
+//! should scale them to suit your purposes.
+//!
+//! # How it Works
+//!
+//! For each variable, there is a separate function that determines its motion.
+//! This function is given by the average of three sinusoidal functions.
+//! 
 //! ```no_run
 //! use meander::rand;
 //! use meander::typenum::U3;
