@@ -2,6 +2,9 @@
 //! This change is done in such a way that should explore the value space fairly
 //! well while also appearing natural and random.
 //! 
+//! One place this might be useful is in code that demonstrates how changing certain
+//! parameters changes a model.
+//! 
 //! ```no_run
 //! use meander::rand;
 //! use meander::typenum::U3;
