@@ -70,7 +70,7 @@ pub struct UnitSinusoid {
 
 impl Distribution<UnitSinusoid> for Standard {
     fn sample<R: Rng + ?Sized>(&self, rng: &mut R) -> UnitSinusoid {
-        let frequency: f64 = rng.gen_range(0.0, 10.0);
+        let frequency: f64 = rng.gen_range(1.0, 10.0);
         let phase = rng.gen_range(0.0, frequency.recip());
         UnitSinusoid { frequency, phase }
     }
