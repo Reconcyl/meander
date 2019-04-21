@@ -1,8 +1,21 @@
 [package]
+
 name = "meander"
 version = "0.1.0"
-authors = ["Reconcyl <>"]
+authors = ["Reconcyl"]
+
 edition = "2018"
+
+description = "continuously vary arbitrarily many parameters pseudorandomly"
+
+documentation = "https://docs.rs/meander"
+homepage = "https://github.com/Reconcyl/meander"
+repository = "https://github.com/Reconcyl/meander"
+
+keywords = []
+categories = []
+
+license = "MIT"
 
 [dependencies]
 generic-array = "0.13.0"
